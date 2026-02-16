@@ -1,0 +1,425 @@
+/* ==========================================================================
+   STYLES.CSS - ATENEA DARK MODE (PARTICIPANTS TABLE BORDER V83)
+   ========================================================================== */
+
+/* --- 1. FONDO AZUL MEDIANOCHE (#10141d) --- */
+body, html, #page, #page-wrapper, #region-main, .main-inner,
+header, #page-footer, .footer-section, .custom_footer_html,
+.filter-group, .bg-light, .bg-white, .backwhite,
+.login-container, .path-login #page, .path-login #page-wrapper,
+.card-header, .card-block, .login-campus, .userinitials
+{
+    background-color: #10141d !important; 
+    color: #eeeeee !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* --- 2. RECUADROS Y BLOQUES CLAROS (#191f2a) --- */
+nav.navbar,
+.card, .card-body, .block, .drawer, .modal-content, .dropdown-menu, 
+.popover, .activity-item, .list-group-item, footer, .logininfo,
+.form-autocomplete-selection,
+.form-autocomplete-input, .form-autocomplete-suggestions,
+.section-item, div[role="menubar"], .moremenu, .navigation,
+.nav-tabs, #page-content ul li, 
+.block_html ul li, ul.list-inline li, .activity-header,
+.filter-group div[data-filterregion="actions"],
+.message-app, .message-app div, .view-conversation, .body-container, 
+.conversationcontainer, .panel-header-container, 
+.footer-container, .view-overview-body, .view-search,
+.icons-collapse-expand, [data-for="sectiontoggler"],
+.nav-tabs,
+[data-toggler="drawers"],
+.border-radius.bg-white.border.d-flex,
+.filter-group.bg-light.border-radius,
+.badge.bg-secondary.text-dark,
+.cell,
+[id^="firstinitial_page-item_"], 
+[id^="lastinitial_page-item_"],
+.page-link:not(.active):not(.disabled),
+.user-report-container,
+thead th.header,
+th.header.column-itemname
+{
+    background-color: #191f2a !important;
+    border-color: #2d3544 !important; 
+}
+
+/* --- 2.1 TEXTO CIAN (#80D8FF) --- */
+.header a, .header strong,
+.cell, .cell a, .cell strong, .cell span,
+.page-link:not(.active):not(.disabled),
+.btn.dropdown-toggle,
+.dropdown-item,
+.dropdown-menu li[role="presentation"],
+.select-menu .dropdown-toggle,
+pre, code, th pre, td pre,
+footer a, .footer-section a, .custom_footer_html a,
+a[href*="atenea-accessibilitat"], a[href*="avis-legal"], 
+a[href*="politica-cookies"], a[href*="upc.edu"],
+th.header, th.header.column-itemname, th.header.c0, th.header.c1, 
+th.header.c2, th.header.c3, th.header.c4, th.header.c5,
+[id^="form_autocomplete_selection-"],
+[role="option"],
+.badge.bg-secondary.text-dark.clickable
+{
+    color: #80D8FF !important;
+}
+
+/* --- 2.2 TEXTO GRIS CLARITO (NO CLICABLES) --- */
+.badge.rounded-pill.bg-secondary.text-dark.order-3:not(.clickable) {
+    color: #a9b1bc !important; 
+}
+
+/* --- 2.3 EXCEPCIONES: TRANSPARENTES --- */
+.footer-content-popover, .moremenu.navigation.observed,
+.announcement_info, .container-fluid, .overviews.list-group,
+.overviews.list-group .list-group-item, .cattree,
+.border-bottom, .border-end, .border-top, .border-0,
+#maincontent, div[id^="yui_3_18_1_1_"], div[id^="message-index-"],
+.message-app a[role="button"], .message-app .btn-link,
+.secondary-navigation, .backwhite.flexwrap,
+fieldset, [data-filterregion="filter"], thead th.header
+{
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* --- 2.4 BORDES CLAROS (#d1d1d1) --- */
+.message-app, 
+.row.h-100.g-0, 
+.filter-group, 
+[id^="moremenu-"][id$="-nav-tabs"],
+.login-container, 
+.login-container .card,
+.filter-group.my-2.p-2,
+.border-radius.bg-white.border.d-flex,
+[id^="firstinitial_page-item_"],
+[id^="lastinitial_page-item_"],
+.page-link,
+.user-report-container
+{
+    border: 1px solid #2D3544 !important; 
+    border-radius: 8px !important; 
+    overflow: hidden !important; 
+}
+
+/* --- FIX PARTICIPANTS TABLE: Solo esta tabla tiene borde redondeado --- */
+#participants {
+    border: 1px solid #2D3544 !important;
+    border-radius: 8px !important;
+    border-collapse: separate !important;
+    overflow: hidden !important;
+}
+
+/* --- FIX SECTION-ITEM --- */
+div.section-item, 
+div.section-item:focus, 
+div.section-item:active, 
+div.section-item:focus-within,
+div.section-item[id^="yui_3_18"] {
+    border: 1px solid #2D3544 !important; 
+    border-radius: 15px !important; 
+    overflow: hidden !important; 
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.course-section-header, .content.course-content-item-content {
+    border-radius: inherit !important;
+}
+
+/* --- 2.5 RESET TOTAL AUNCLICK --- */
+ul.aunclick li a {
+    color: #80D8FF !important;
+    background-color: #191f2a !important;
+    box-shadow: inset 0 0 0 1px #d1d1d1 !important; 
+    border: none !important;
+    border-radius: 50px !important; 
+    padding: 6px 16px !important;
+    transition: all 0.1s ease-in-out !important;
+    display: inline-block !important;
+}
+
+ul.aunclick li a:hover {
+    background-color: #2d3544 !important;
+    box-shadow: inset 0 0 0 1px #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* --- 3. ELEMENTOS INTERACTIVOS --- */
+button.btn:not(.btn-link):not([data-toggler="drawers"]), 
+.btn-secondary, .custom-select, .form-control,
+input[type="text"], input[type="password"], textarea {
+    background-color: #191f2a !important;
+    color: #ffffff !important;
+    border: 1px solid #2D3544 !important; 
+    border-radius: 8px !important;
+}
+
+/* --- 3.1 FIX BOTÓN ELIMINAR FILTRO (POR ARIA-LABEL) --- */
+[aria-label="Suprimeix la fila de filtres"] {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* --- 4. NAV-LINKS ACTIVOS (SIN BORDE) --- */
+/* Específico para la navegación secundaria y menús de Atenea */
+.secondary-navigation .nav-tabs .nav-link.active,
+.moremenu .nav-link.active,
+#page-header .nav-link.active,
+a[role="menuitem"].active {
+    background-color: #191f2a !important; 
+    color: #ffffff !important;
+    border: none !important; /* Eliminamos el borde */
+    border-bottom: 2px solid #80D8FF !important; /* Opcional: una línea sutil debajo para saber qué está seleccionado */
+    box-shadow: none !important;
+}
+/* --- HOVER EN NAV-LINKS (EXCEPTO ACTIVOS) --- */
+/* Solo afecta a los enlaces de navegación cuando pasas el ratón y no están activos */
+.secondary-navigation .nav-link:not(.active):hover,
+.moremenu .nav-link:not(.active):hover,
+#page-header .nav-link:not(.active):hover {
+    background-color: #2d3544 !important; /* Gris azulado sutil */
+    color: #ffffff !important;
+    border-radius: 8px !important; /* Para que el fondo no sea un rectángulo seco */
+    transition: background-color 0.2s ease !important; /* Suaviza la transición */
+}
+/* --- PREVENIR CAMBIOS DE COLOR AL CLICAR EN NAV-LINKS YA ACTIVOS --- */
+.secondary-navigation .nav-link.active:hover,
+.secondary-navigation .nav-link.active:focus,
+.secondary-navigation .nav-link.active:active,
+.moremenu .nav-link.active:hover,
+.moremenu .nav-link.active:focus,
+.moremenu .nav-link.active:active {
+    background-color: #191f2a !important; /* Mantenemos el color oscuro original */
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* --- 5. LOGO Y TEXTOS --- */
+h1, h2, h5, .logininfo, label, legend, strong, p, span { color: #ffffff !important; }
+img.icon, .activityicon { filter: invert(1) hue-rotate(180deg); }
+h3, h3 a, h4, h4 a, .sectionname a, i.icon, i.fa, .fa { color: #80D8FF !important; }
+
+.navbar-brand {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/logo-upc.png') !important;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    width: 200px; 
+    height: 50px;
+}
+.navbar-brand img { opacity: 0 !important; }
+.img-footer, img[src*="footer"] { filter: invert(0.9) hue-rotate(180deg) !important; }
+
+/* --- FIX PARA TARJETAS DE CURSO (PREVENIR DESAPARICIÓN AL CLICAR) --- */
+
+/* Forzamos a que la tarjeta mantenga su color y borde aunque YUI le asigne un ID dinámico */
+.card-body.course-info-container {
+    background-color: #191f2a !important;
+    border: 1px solid #2d3544 !important;
+    border-radius: 8px !important;
+    color: #eeeeee !important;
+}
+
+/* Protegemos también la lista de detalles interna (año, facultad, etc.) */
+.course-info-container .mycourses_detailinfo ul.overviews {
+    background-color: transparent !important; /* El fondo lo da la card-body */
+    border: none !important;
+}
+
+.course-info-container li.list-group-item.cattree {
+    background-color: transparent !important;
+    border: none !important;
+    color: #a9b1bc !important; /* Gris suave para info secundaria */
+}
+
+/* Evitamos que el selector genérico de YUI (si lo tienes) pise estos estilos */
+div[id^="yui_3_18"].course-info-container {
+    background-color: #191f2a !important;
+    border: 1px solid #2d3544 !important;
+}
+/* --- PROTECCIÓN TOTAL DE TARJETAS DE CURSO --- */
+
+/* Forzamos que la tarjeta (el contenedor padre) mantenga su borde siempre */
+.card.dashboard-card, 
+.card.coursebox,
+.card[id^="course-info-container-"] {
+    background-color: #191f2a !important;
+    border: 1px solid #2D3544 !important; /* El borde que quieres mantener */
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Forzamos que el contenido interno NO tenga bordes para evitar el doble borde */
+.course-info-container,
+div[id^="yui_3_18"].course-info-container,
+.card-body.course-info-container {
+    border: none !important; 
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* REGLA MAESTRA: Si el ID de YUI cae sobre la tarjeta, que NO se vuelva transparente */
+div[id^="yui_3_18"].card,
+div[id^="yui_3_18"].dashboard-card {
+    background-color: #191f2a !important;
+    border: 1px solid #2D3544 !important;
+}
+
+/* =============================================================
+   SOLUCIÓN GENERAL: BLOQUES DEL DASHBOARD (TIMELINE, ANUNCIOS, ETC)
+   ============================================================= */
+
+/* 1. Forzamos que CUALQUIER tarjeta de bloque recorte sus esquinas y tenga fondo oscuro */
+section.block.card,
+.block_announcements.card,
+.block_timeline.card {
+    background-color: #191f2a !important;
+    border: 1px solid #2D3544 !important;
+    border-radius: 12px !important; /* Un poco más de radio para que se note el diseño */
+    overflow: hidden !important;    /* ESTA ES LA CLAVE: Recorta todo lo que haya dentro */
+}
+
+/* 2. Hacemos transparentes los fondos "parche" que traen los bloques por defecto */
+section.block .card-body,
+section.block .backwhite,
+section.block .list-group-item,
+section.block .announcement_element_box,
+section.block .p-0.px-2 {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* 3. Aseguramos que los elementos internos no tengan sombras que ensucien el borde */
+section.block .card-text, 
+section.block .content,
+section.block .announcement_info {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 4. Neutralizamos YUI de forma preventiva para que el diseño no cambie al clicar */
+section.block div[id^="yui_3_18"] {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* 5. Ajuste de textos para legibilidad en todos los bloques */
+section.block h3, 
+section.block h4, 
+section.block h5, 
+section.block .event-name a {
+    color: #80D8FF !important; /* Títulos en Cian */
+}
+
+section.block p, 
+section.block span, 
+section.block small {
+    color: #eeeeee !important; /* Textos normales en gris claro */
+}
+
+/* --- FIX PARA BADGE SUCCESS (VERDE) --- */
+.badge.rounded-pill.alert-success.icon-no-margin {
+    background-color: #4B9632 !important;
+    color: #ffffff !important;
+    border: none !important; /* Eliminamos cualquier borde heredado */
+}
+
+/* --- FIX FINAL: RECUPERAR LÍNEA INDENTADA Y REDONDEADO --- */
+
+/* 1. El contenedor PADRE (la tarjeta) es el que debe tener el fondo, el borde y el padding lateral */
+.activity-header[id^="yui_3_18"] {
+    background-color: #191f2a !important;
+    border-radius: .5rem !important;
+    padding: 0 1.25rem !important; /* Padding lateral que 'empuja' la línea hacia dentro */
+}
+
+/* 2. Vaciamos los fondos de los hijos para que se vea el del padre */
+.activity-information[id^="yui_3_18"],
+.activity-information[id^="yui_3_18"] .completion-info,
+.activity-information[id^="yui_3_18"] .activity-dates {
+    background-color: transparent !important;
+    border-left: none !important;
+    border-right: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* 3. Mantenemos la línea divisoria original de Atenea. 
+      Al estar dentro de un padre con padding, no tocará los bordes. */
+.activity-information[id^="yui_3_18"] .completion-info {
+    border-bottom: 1px solid #dee2e6 !important; /* La línea divisoria */
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.activity-information[id^="yui_3_18"] .activity-dates {
+    border-top: none !important; /* Evitamos duplicar la línea */
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* 4. Aseguramos que el texto sea blanco */
+.activity-information[id^="yui_3_18"] strong,
+.activity-information[id^="yui_3_18"] span:not(.badge) {
+    color: #ffffff !important;
+}
+
+/* Scrollbar personalizada para que combine con el modo oscuro */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #10141d;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2d3544;
+    border-radius: 10px;
+    border: 3px solid #10141d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #80D8FF;
+}
+
+
+
+
+
+
+
+/* --- ESTILOS DEL INTERRUPTOR (Para que quede alineado como la v1) --- */
+#atenea-dark-mode-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* --- TU MODO OSCURO (Ahora condicionado al interruptor) --- */
+
+/* Solo se activa si el body tiene la clase 'dark-mode-enabled' */
+body.dark-mode-enabled, 
+body.dark-mode-enabled #page, 
+body.dark-mode-enabled #region-main,
+body.dark-mode-enabled .main-inner,
+body.dark-mode-enabled header,
+body.dark-mode-enabled #page-footer {
+    background-color: #10141d !important; 
+    color: #eeeeee !important;
+    background-image: none !important;
+}
+
+body.dark-mode-enabled nav.navbar,
+body.dark-mode-enabled .card, 
+body.dark-mode-enabled .card-body, 
+body.dark-mode-enabled .block {
+    background-color: #191f2a !important;
+    border-color: #2d3544 !important;
+}
+
+/* ... Debes poner "body.dark-mode-enabled" delante de todos tus bloques de color ... */
