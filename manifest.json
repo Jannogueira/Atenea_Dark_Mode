@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Atenea Dark Mode (UPC)",
-  "version": "1.3",
+  "version": "2.0",
+  "description": "Dark mode para Atenea UPC",
   "icons": {
     "16": "logo.png",
     "48": "logo.png",
@@ -11,9 +12,16 @@
   "content_scripts": [
     {
       "matches": ["*://atenea.upc.edu/*"],
+      "js": ["preload.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": ["*://atenea.upc.edu/*"],
       "css": ["styles.css"],
       "js": ["content.js"],
-      "run_at": "document_end"
+      "run_at": "document_idle",
+      "all_frames": false
     }
   ],
   "web_accessible_resources": [
