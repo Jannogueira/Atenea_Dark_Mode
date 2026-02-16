@@ -1,29 +1,30 @@
 /* ==========================================================================
-   ATENEA DARK MODE - HYBRID FINAL VERSION
+   ATENEA DARK MODE - VERSIÓN FINAL COMPLETA
+   Todos los fixes aplicados y funcionando
    ========================================================================== */
 
 /* --- VARIABLES CSS --- */
 :root {
     /* Backgrounds */
-    --dm-bg-primary: #10141d;      /* Fondo principal (reemplaza #fff) */
-    --dm-bg-secondary: #191f2a;    /* Recuadros (reemplaza #f8f9fa) */
+    --dm-bg-primary: #10141d;      /* Fondo principal */
+    --dm-bg-secondary: #191f2a;    /* Recuadros y bloques */
     
     /* Borders */
-    --dm-border: #2d3544;          /* Bordes principales (reemplaza #dee2e6) */
+    --dm-border: #2d3544;          /* Bordes principales */
     
     /* Text colors */
-    --dm-text-primary: #eeeeee;    /* Texto principal (reemplaza #1d2125) */
-    --dm-text-secondary: #a9b1bc;  /* Texto secundario (reemplaza #6a737b) */
+    --dm-text-primary: #eeeeee;    /* Texto principal */
+    --dm-text-secondary: #a9b1bc;  /* Texto secundario */
     
     /* Accent colors */
-    --dm-accent: #80D8FF;          /* Cian para links (reemplaza #07b) */
+    --dm-accent: #80D8FF;          /* Cian para links */
     --dm-accent-hover: #a0e8ff;    /* Hover state */
     
     /* Status colors */
     --dm-success: #4B9632;         /* Verde */
-    --dm-error: #ff6b6b;           /* Rojo para errores */
-    --dm-warning: #ffd43b;         /* Amarillo para warnings */
-    --dm-info: #74c0fc;            /* Azul para info */
+    --dm-error: #ff6b6b;           /* Rojo */
+    --dm-warning: #ffd43b;         /* Amarillo */
+    --dm-info: #74c0fc;            /* Azul info */
     
     /* Interactive states */
     --dm-hover: #2d3544;           /* Hover backgrounds */
@@ -83,7 +84,6 @@ body.dark-mode-enabled .logininfo,
 body.dark-mode-enabled .form-autocomplete-selection,
 body.dark-mode-enabled .form-autocomplete-input,
 body.dark-mode-enabled .form-autocomplete-suggestions,
-body.dark-mode-enabled .section-item,
 body.dark-mode-enabled div[role="menubar"],
 body.dark-mode-enabled .moremenu,
 body.dark-mode-enabled .navigation,
@@ -179,7 +179,9 @@ body.dark-mode-enabled label,
 body.dark-mode-enabled legend,
 body.dark-mode-enabled strong,
 body.dark-mode-enabled p,
-body.dark-mode-enabled span {
+body.dark-mode-enabled span,
+body.dark-mode-enabled time,
+body.dark-mode-enabled .mb-1.line-height-3.text-truncate {
     color: var(--dm-text-primary) !important;
 }
 
@@ -188,7 +190,7 @@ body.dark-mode-enabled .badge.rounded-pill.bg-secondary.text-dark.order-3:not(.c
     color: var(--dm-text-secondary) !important;
 }
 
-/* Success text (your fix) */
+/* Success text (right answer in quizzes) */
 body.dark-mode-enabled .rightanswer {
     color: var(--dm-success) !important;
 }
@@ -259,6 +261,14 @@ body.dark-mode-enabled .specificfeedback {
     outline: none !important;
 }
 
+/* Fix: Eliminate transitions that cause flash on click */
+body.dark-mode-enabled .nav-link,
+body.dark-mode-enabled .nav-link *,
+body.dark-mode-enabled a[role="tab"],
+body.dark-mode-enabled a[role="tab"] * {
+    transition: none !important;
+}
+
 /* aunclick navigation */
 body.dark-mode-enabled ul.aunclick li a {
     color: var(--dm-accent) !important;
@@ -301,33 +311,102 @@ body.dark-mode-enabled .user-report-container {
 /* Participants table and quiz tables */
 body.dark-mode-enabled #participants,
 body.dark-mode-enabled .table-responsive,
-body.dark-mode-enabled .generaltable.generalbox.quizreviewsummary.mb-0 {
+body.dark-mode-enabled .generaltable.generalbox.quizreviewsummary.mb-0,
+body.dark-mode-enabled .table.discussion-list.generaltable {
     border: 1px solid var(--dm-border) !important;
     border-radius: 8px !important;
     border-collapse: separate !important;
     overflow: hidden !important;
 }
 
-/* Section items */
+/* ==========================================================================
+   SECTION 7: SECTION-ITEM (Actividades individuales)
+   ========================================================================== */
+
 body.dark-mode-enabled div.section-item,
 body.dark-mode-enabled div.section-item:focus,
 body.dark-mode-enabled div.section-item:active,
 body.dark-mode-enabled div.section-item:focus-within,
 body.dark-mode-enabled div.section-item[id^="yui_3_18"] {
+    background-color: var(--dm-bg-secondary) !important;
     border: 1px solid var(--dm-border) !important;
     border-radius: 15px !important;
     overflow: hidden !important;
     outline: none !important;
     box-shadow: none !important;
+    position: relative !important;
+    isolation: isolate !important;
 }
 
-body.dark-mode-enabled .course-section-header,
-body.dark-mode-enabled .content.course-content-item-content {
-    border-radius: inherit !important;
+body.dark-mode-enabled .section-item .course-section-header,
+body.dark-mode-enabled .section-item .content.course-content-item-content {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+body.dark-mode-enabled .section-item * {
+    background-clip: padding-box !important;
 }
 
 /* ==========================================================================
-   SECTION 7: TRANSPARENT ELEMENTS
+   SECTION 8: SECCIONES NUMERADAS (section-1, section-2, etc.) - FIX CRÍTICO
+   ========================================================================== */
+
+body.dark-mode-enabled li.section,
+body.dark-mode-enabled li[id^="section-"],
+body.dark-mode-enabled #section-1,
+body.dark-mode-enabled #section-2,
+body.dark-mode-enabled #section-3,
+body.dark-mode-enabled #section-4,
+body.dark-mode-enabled #section-5,
+body.dark-mode-enabled #section-6,
+body.dark-mode-enabled #section-7,
+body.dark-mode-enabled #section-8,
+body.dark-mode-enabled #section-9,
+body.dark-mode-enabled #section-10,
+body.dark-mode-enabled #section-11,
+body.dark-mode-enabled #section-12,
+body.dark-mode-enabled #section-13,
+body.dark-mode-enabled #section-14,
+body.dark-mode-enabled #section-15,
+body.dark-mode-enabled li.section.main {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+/* CRÍTICO: El section-item HIJO no debe tener borde (evita duplicación) */
+body.dark-mode-enabled li.section .section-item,
+body.dark-mode-enabled li.section > .section-item {
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+}
+
+/* Los demás hijos transparentes */
+body.dark-mode-enabled li.section > *:not(.section-item),
+body.dark-mode-enabled li.section .content,
+body.dark-mode-enabled li.section .sectionhead {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+/* El UL interno (lista de actividades) sin background ni borde */
+body.dark-mode-enabled li.section ul.section,
+body.dark-mode-enabled li.section > ul {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px !important;
+}
+
+/* ==========================================================================
+   SECTION 9: TRANSPARENT ELEMENTS
    ========================================================================== */
 
 body.dark-mode-enabled .footer-content-popover,
@@ -358,7 +437,7 @@ body.dark-mode-enabled .formulation.clearfix {
 }
 
 /* ==========================================================================
-   SECTION 8: COURSE CARDS
+   SECTION 10: COURSE CARDS
    ========================================================================== */
 
 body.dark-mode-enabled .card.dashboard-card,
@@ -396,7 +475,7 @@ body.dark-mode-enabled .course-info-container li.list-group-item.cattree {
 }
 
 /* ==========================================================================
-   SECTION 9: DASHBOARD BLOCKS
+   SECTION 11: DASHBOARD BLOCKS
    ========================================================================== */
 
 body.dark-mode-enabled section.block.card,
@@ -443,7 +522,7 @@ body.dark-mode-enabled section.block small {
 }
 
 /* ==========================================================================
-   SECTION 10: BADGES
+   SECTION 12: BADGES
    ========================================================================== */
 
 body.dark-mode-enabled .badge.rounded-pill.alert-success.icon-no-margin {
@@ -453,7 +532,7 @@ body.dark-mode-enabled .badge.rounded-pill.alert-success.icon-no-margin {
 }
 
 /* ==========================================================================
-   SECTION 11: ICONS
+   SECTION 13: ICONS
    ========================================================================== */
 
 body.dark-mode-enabled img.icon,
@@ -467,7 +546,7 @@ body.dark-mode-enabled img[src*="footer"] {
 }
 
 /* ==========================================================================
-   SECTION 12: ACTIVITY INFORMATION
+   SECTION 14: ACTIVITY INFORMATION
    ========================================================================== */
 
 body.dark-mode-enabled .activity-header[id^="yui_3_18"] {
@@ -504,7 +583,7 @@ body.dark-mode-enabled .activity-information[id^="yui_3_18"] span:not(.badge) {
 }
 
 /* ==========================================================================
-   SECTION 13: QUIZ INFO BLOCKS (YOUR SPECIFIC FIX)
+   SECTION 15: QUIZ INFO BLOCKS
    ========================================================================== */
 
 /* Maximum priority fix for quiz question info blocks */
@@ -539,7 +618,7 @@ html body.dark-mode-enabled .info div[id*="yui"] {
 }
 
 /* ==========================================================================
-   SECTION 14: LOGO
+   SECTION 16: LOGO
    ========================================================================== */
 
 body.dark-mode-enabled .navbar-brand {
@@ -556,7 +635,7 @@ body.dark-mode-enabled .navbar-brand img {
 }
 
 /* ==========================================================================
-   SECTION 15: SCROLLBAR
+   SECTION 17: SCROLLBAR
    ========================================================================== */
 
 body.dark-mode-enabled ::-webkit-scrollbar {
@@ -575,7 +654,7 @@ body.dark-mode-enabled ::-webkit-scrollbar-thumb:hover {
 }
 
 /* ==========================================================================
-   SECTION 16: DARK MODE SWITCH (UI ONLY - NOT CONDITIONED)
+   SECTION 18: DARK MODE SWITCH (UI ONLY - NOT CONDITIONED)
    ========================================================================== */
 
 #atenea-dark-mode-container {
