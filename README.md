@@ -9,4 +9,3 @@ Siguientes cosas por solucionar:
 
 badge.rounded-pill (no se ven)
 badge.rounded-pill.alert-success (se ven muy oscuros)
-Algunos "li" se ven con el fondo claro

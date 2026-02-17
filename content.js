@@ -34,7 +34,7 @@
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="${CONFIG.SWITCH_ID}">
                 <label class="custom-control-label" for="${CONFIG.SWITCH_ID}" style="cursor:pointer;">
-                    <i class="fa fa-sun-o sun-icon" style="color: #676767;"></i>
+                    <i class="fa fa-sun-o sun-icon" style="color: #666666;"></i>
                     <i class="fa fa-moon-o moon-icon" style="color: #80D8FF; display: none;"></i>
                 </label>
             </div>
