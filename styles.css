@@ -659,3 +659,7 @@ body.dark-mode-enabled ::-webkit-scrollbar-thumb:hover {
     align-items: center;
     height: 100%;
 }
+
+body.dark-mode-enabled li {
+    background-color: transparent !important;
+}
