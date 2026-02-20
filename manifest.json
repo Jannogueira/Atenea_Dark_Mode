@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Atenea Dark Mode (UPC)",
-  "version": "2.1",
+  "version": "2.2",
   "description": "Dark mode para Atenea UPC",
   "icons": {
     "16": "logo.png",

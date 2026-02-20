@@ -3,7 +3,7 @@ Modo oscuro para el campus virtual de la UPC (Universidad Politécnica de Catalu
 
 -[Chrome](https://chromewebstore.google.com/detail/atenea-dark-mode-upc/piominmkecjgbnbpajhpdbomamoeommd?authuser=0&hl=es)
 
--[Edge (en proceso de validación)]
+-[Edge](https://microsoftedge.microsoft.com/addons/detail/fnokenjmlmgkkcolpaonjidenpncnnbe)
 
 Hecho con la ayuda de la IA
 

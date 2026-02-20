@@ -663,3 +663,108 @@ body.dark-mode-enabled ::-webkit-scrollbar-thumb:hover {
 body.dark-mode-enabled li {
     background-color: transparent !important;
 }
+/* ==========================================================================
+   SECTION 19: TINYMCE EDITOR
+   ========================================================================== */
+
+/* Contenedor principal */
+body.dark-mode-enabled .tox.tox-tinymce,
+body.dark-mode-enabled div.tox.tox-tinymce {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+
+/* Editor header y menubar - sin bordes inferiores */
+body.dark-mode-enabled .tox-editor-header,
+body.dark-mode-enabled div.tox-editor-header,
+body.dark-mode-enabled .tox-menubar,
+body.dark-mode-enabled div.tox-menubar {
+    background-color: var(--dm-bg-secondary) !important;
+    border-bottom: none !important;
+}
+
+/* Botones menubar */
+body.dark-mode-enabled .tox-mbtn.tox-mbtn--select,
+body.dark-mode-enabled button.tox-mbtn {
+    background-color: var(--dm-bg-secondary) !important;
+    border: none !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .tox-mbtn:hover {
+    background-color: var(--dm-hover) !important;
+}
+
+/* Toolbar overlord - sin bordes */
+body.dark-mode-enabled .tox-toolbar-overlord,
+body.dark-mode-enabled div.tox-toolbar-overlord {
+    background-color: var(--dm-bg-secondary) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* Toolbar primary - CON bordes decorativos arriba y abajo */
+body.dark-mode-enabled .tox-toolbar__primary,
+body.dark-mode-enabled div.tox-toolbar__primary {
+    background-color: var(--dm-bg-secondary) !important;
+    border-top: 1px solid var(--dm-border) !important;
+    border-bottom: 1px solid var(--dm-border) !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+body.dark-mode-enabled .tox-toolbar__overflow.tox-toolbar__overflow--open {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+
+/* Botones toolbar */
+body.dark-mode-enabled .tox-tbtn,
+body.dark-mode-enabled button.tox-tbtn {
+    background-color: var(--dm-bg-secondary) !important;
+    border: none !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .tox-tbtn:hover {
+    background-color: var(--dm-hover) !important;
+}
+
+/* Iconos SVG */
+body.dark-mode-enabled .tox-tbtn svg {
+    fill: var(--dm-text-primary) !important;
+}
+
+/* Iconos imagen */
+body.dark-mode-enabled .tox-tbtn image,
+body.dark-mode-enabled .tox-icon image {
+    filter: invert(1) brightness(1.2) !important;
+}
+
+/* Statusbar */
+body.dark-mode-enabled .tox-statusbar,
+body.dark-mode-enabled div.tox-statusbar {
+    background-color: var(--dm-bg-secondary) !important;
+    border-top: 1px solid var(--dm-border) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .tox-statusbar__wordcount,
+body.dark-mode-enabled button.tox-statusbar__wordcount {
+    background-color: transparent !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .tox-statusbar__branding a {
+    color: var(--dm-accent) !important;
+}
+
+body.dark-mode-enabled .tox-statusbar__branding a svg {
+    fill: var(--dm-accent) !important;
+}
+
+/* Sidebar y área de edición */
+body.dark-mode-enabled .tox-sidebar-wrap,
+body.dark-mode-enabled .tox-edit-area__iframe {
+    background-color: var(--dm-bg-secondary) !important;
+}
