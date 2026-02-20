@@ -527,6 +527,22 @@ body.dark-mode-enabled .alert.alert-danger.alert-block {
     border: 1px solid var(--dm-error) !important;
 }
 
+body.dark-mode-enabled .activity {
+    border-top: transparent !important;
+}
+
+body.dark-mode-enabled .activity-afterlink.afterlink.d-flex.align-items-center {
+    border-top: 1px solid var(--dm-border) !important;
+
+}
+
+body.dark-mode-enabled .activity.activity-wrapper.label.modtype_label.hasinfo {
+    border-bottom: 1px solid var(--dm-border) !important;
+}
+
+
+
+
 /* ==========================================================================
    SECTION 12: BADGES
    ========================================================================== */
