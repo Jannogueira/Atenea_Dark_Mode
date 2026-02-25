@@ -301,8 +301,6 @@ body.dark-mode-enabled .message-app,
 body.dark-mode-enabled .row.h-100.g-0,
 body.dark-mode-enabled .filter-group,
 body.dark-mode-enabled [id^="moremenu-"][id$="-nav-tabs"],
-body.dark-mode-enabled .login-container,
-body.dark-mode-enabled .login-container .card,
 body.dark-mode-enabled .filter-group.my-2.p-2,
 body.dark-mode-enabled .border-radius.bg-white.border.d-flex,
 body.dark-mode-enabled [id^="firstinitial_page-item_"],
@@ -802,8 +800,25 @@ body.dark-mode-enabled .tox-statusbar__branding a svg {
     fill: var(--dm-accent) !important;
 }
 
+/* ==========================================================================
+   SECTION 20: Sidebar
+   ========================================================================== */
+
 /* Sidebar y área de edición */
 body.dark-mode-enabled .tox-sidebar-wrap,
 body.dark-mode-enabled .tox-edit-area__iframe {
     background-color: var(--dm-bg-secondary) !important;
+}
+
+/* ==========================================================================
+   SECTION 21: PARCHE YUI ALERTAS
+   ========================================================================== */
+
+body.dark-mode-enabled .modal-content,
+body.dark-mode-enabled div.modal-content,
+body.dark-mode-enabled .modal-content[id^="yui"],
+body.dark-mode-enabled div[id^="yui"].modal-content {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
 }
