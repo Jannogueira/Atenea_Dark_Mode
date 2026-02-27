@@ -6,28 +6,40 @@
 /* --- VARIABLES CSS --- */
 :root {
     /* Backgrounds */
-    --dm-bg-primary: #10141d;      /* Fondo principal */
-    --dm-bg-secondary: #191f2a;    /* Recuadros y bloques */
-    
+    --dm-bg-primary: #10141d;
+    /* Fondo principal */
+    --dm-bg-secondary: #191f2a;
+    /* Recuadros y bloques */
+
     /* Borders */
-    --dm-border: #2d3544;          /* Bordes principales */
-    
+    --dm-border: #2d3544;
+    /* Bordes principales */
+
     /* Text colors */
-    --dm-text-primary: #eeeeee;    /* Texto principal */
-    --dm-text-secondary: #a9b1bc;  /* Texto secundario */
-    
+    --dm-text-primary: #eeeeee;
+    /* Texto principal */
+    --dm-text-secondary: #a9b1bc;
+    /* Texto secundario */
+
     /* Accent colors */
-    --dm-accent: #80D8FF;          /* Cian para links */
-    --dm-accent-hover: #a0e8ff;    /* Hover state */
-    
+    --dm-accent: #80D8FF;
+    /* Cian para links */
+    --dm-accent-hover: #a0e8ff;
+    /* Hover state */
+
     /* Status colors */
-    --dm-success: #4B9632;         /* Verde */
-    --dm-error: #ff6b6b;           /* Rojo */
-    --dm-warning: #ffd43b;         /* Amarillo */
-    --dm-info: #74c0fc;            /* Azul info */
-    
+    --dm-success: #4B9632;
+    /* Verde */
+    --dm-error: #ff6b6b;
+    /* Rojo */
+    --dm-warning: #ffd43b;
+    /* Amarillo */
+    --dm-info: #74c0fc;
+    /* Azul info */
+
     /* Interactive states */
-    --dm-hover: #2d3544;           /* Hover backgrounds */
+    --dm-hover: #2d3544;
+    /* Hover backgrounds */
 }
 
 /* ==========================================================================
@@ -386,14 +398,14 @@ body.dark-mode-enabled li.section.main {
 
 /* CRÍTICO: El section-item HIJO no debe tener borde (evita duplicación) */
 body.dark-mode-enabled li.section .section-item,
-body.dark-mode-enabled li.section > .section-item {
+body.dark-mode-enabled li.section>.section-item {
     border: none !important;
     border-radius: 0 !important;
     background-color: transparent !important;
 }
 
 /* Los demás hijos transparentes */
-body.dark-mode-enabled li.section > *:not(.section-item),
+body.dark-mode-enabled li.section>*:not(.section-item),
 body.dark-mode-enabled li.section .content,
 body.dark-mode-enabled li.section .sectionhead {
     background-color: transparent !important;
@@ -403,7 +415,7 @@ body.dark-mode-enabled li.section .sectionhead {
 
 /* El UL interno (lista de actividades) sin background ni borde */
 body.dark-mode-enabled li.section ul.section,
-body.dark-mode-enabled li.section > ul {
+body.dark-mode-enabled li.section>ul {
     background: transparent !important;
     border: none !important;
     padding: 10px !important;
@@ -662,6 +674,7 @@ body.dark-mode-enabled .navbar-brand {
 body.dark-mode-enabled .navbar-brand img {
     opacity: 0 !important;
 }
+
 /* Logo compacto en drawer lateral */
 body.dark-mode-enabled .drawer .drawerheader img.logo {
     content: url('chrome-extension://__MSG_@@extension_id__/logo-upc.png') !important;
@@ -700,6 +713,7 @@ body.dark-mode-enabled ::-webkit-scrollbar-thumb:hover {
 body.dark-mode-enabled li {
     background-color: transparent !important;
 }
+
 /* ==========================================================================
    SECTION 19: TINYMCE EDITOR
    ========================================================================== */
@@ -821,4 +835,56 @@ body.dark-mode-enabled div[id^="yui"].modal-content {
     background-color: var(--dm-bg-secondary) !important;
     border: 1px solid var(--dm-border) !important;
     border-radius: 8px !important;
+}
+
+/* ==========================================================================
+   SECTION 21: MENSAJES
+   ========================================================================== */
+
+body.dark-mode-enabled .message.clickable.d-flex.flex-column.p-2.mx-1.position-relative.send.rounded.mb-2.mt-2,
+body.dark-mode-enabled .message.clickable.d-flex.flex-column.p-2.mx-1.position-relative.received.rounded.mb-2.mt-2 {
+    border: 1px solid var(--dm-border) !important;
+    background-color: var(--dm-bg-secondary) !important;
+}
+
+body.dark-mode-enabled .text-center.mb-4.day,
+body.dark-mode-enabled .ms-auto.small.text-end.time,
+body.dark-mode-enabled .text-truncate.m-0.font-weight-bold {
+    color: var(--dm-text-primary) !important;
+    background-color: transparent !important;
+}
+
+body.dark-mode-enabled .bg-white.position-relative.border-bottom.p-1.px-sm-2 {
+    border-bottom: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .message .tail,
+body.dark-mode-enabled .tail.position-absolute {
+    display: none !important;
+}
+
+body.dark-mode-enabled .text-truncate.m-0.font-weight-bold,
+body.dark-mode-enabled .d-flex.align-items-center {
+    background-color: transparent !important;
+}
+
+body.dark-mode-enabled .icon-no-margin.btn.btn-submit {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+
+
+/* ==========================================================================
+   SECTION 22: NOTIFICACIONES
+   ========================================================================== */
+
+body.dark-mode-enabled .popover-region-container,
+body.dark-mode-enabled .popover-region-footer-container {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
+}
+
+body.dark-mode-enabled .popover-region-header-container {
+    border-bottom: 1px solid var(--dm-border) !important;
 }
