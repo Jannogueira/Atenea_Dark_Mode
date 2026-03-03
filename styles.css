@@ -10,6 +10,8 @@
     /* Fondo principal */
     --dm-bg-secondary: #191f2a;
     /* Recuadros y bloques */
+    --dm-bg-tertiary: #2a3751;
+    /* Otros*/
 
     /* Borders */
     --dm-border: #2d3544;
@@ -887,4 +889,9 @@ body.dark-mode-enabled .popover-region-footer-container {
 
 body.dark-mode-enabled .popover-region-header-container {
     border-bottom: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .content-item-container.notification.unread {
+    background-color: var(--dm-bg-tertiary) !important;
+    border-bottom: 2px solid var(--dm-border) !important;
 }
