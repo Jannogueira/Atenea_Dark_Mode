@@ -6,8 +6,3 @@ Modo oscuro para el campus virtual de la UPC (Universidad Politécnica de Catalu
 -[Edge](https://microsoftedge.microsoft.com/addons/detail/fnokenjmlmgkkcolpaonjidenpncnnbe)
 
 Hecho con la ayuda de la IA
-
-Siguientes cosas por solucionar: 
-
-badge.rounded-pill (no se ven)
-badge.rounded-pill.alert-success (se ven muy oscuros)
