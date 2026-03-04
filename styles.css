@@ -30,7 +30,7 @@
     /* Hover state */
 
     /* Status colors */
-    --dm-success: #4B9632;
+    --dm-success: #2c571e;
     /* Verde */
     --dm-error: #ff6b6b;
     /* Rojo */
@@ -337,6 +337,11 @@ body.dark-mode-enabled .table.discussion-list.generaltable {
     overflow: hidden !important;
 }
 
+body.dark-mode-enabled .flexible.table.table-striped.table-hover.boxaligncenter.generaltable {
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
+}
+
 /* ==========================================================================
    SECTION 7: SECTION-ITEM (Actividades individuales)
    ========================================================================== */
@@ -567,12 +572,25 @@ body.dark-mode-enabled .activity.activity-wrapper.label.modtype_label.hasinfo {
 /* ==========================================================================
    SECTION 12: BADGES
    ========================================================================== */
-
 body.dark-mode-enabled .badge.rounded-pill.alert-success.icon-no-margin {
     background-color: var(--dm-success) !important;
-    color: #ffffff !important;
-    border: none !important;
+    color: var(--dm-text-primary) !important;
+    border-radius: 20px !important;
+    mix-blend-mode: normal !important;
 }
+
+body.dark-mode-enabled .badge.rounded-pill.alert-success.icon-no-margin .icon.fa.fa-check.fa-fw {
+    color: #5cb85c !important;
+}
+
+
+body.dark-mode-enabled .badge.rounded-pill.bg-light.text-dark {
+    background-color: var(--dm-bg-tertiary) !important;
+    color: var(--dm-text-primary) !important;
+    border-radius: 20px !important;
+    mix-blend-mode: normal !important;
+}
+
 
 /* ==========================================================================
    SECTION 13: ICONS
@@ -612,6 +630,11 @@ body.dark-mode-enabled .activity-information[id^="yui_3_18"] .completion-info {
     border-bottom: 1px solid #dee2e6 !important;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
+    border-bottom-color: var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .completion-info {
+    border-bottom: 1px solid var(--dm-border) !important;
 }
 
 body.dark-mode-enabled .activity-information[id^="yui_3_18"] .activity-dates {
@@ -875,6 +898,15 @@ body.dark-mode-enabled .icon-no-margin.btn.btn-submit {
     border: 1px solid var(--dm-border) !important;
 }
 
+body.dark-mode-enabled .col-4.d-flex.flex-column.conversationcontainer {
+    background-color: var(--dm-bg-secondary) !important;
+    border-right: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .body-container.position-relative {
+    background-color: var(--dm-bg-secondary) !important;
+}
+
 
 /* ==========================================================================
    SECTION 22: NOTIFICACIONES
@@ -894,4 +926,36 @@ body.dark-mode-enabled .popover-region-header-container {
 body.dark-mode-enabled .content-item-container.notification.unread {
     background-color: var(--dm-bg-tertiary) !important;
     border-bottom: 2px solid var(--dm-border) !important;
+}
+
+
+/* ==========================================================================
+   SECTION 23: ENTREGAS
+   ========================================================================== */
+
+body.dark-mode-enabled .submissionstatussubmitted.cell.c1.lastcol,
+body.dark-mode-enabled .earlysubmission.cell.c1.lastcol {
+    background-color: var(--dm-success) !important;
+}
+
+
+
+/* ==========================================================================
+   SECTION 23: HOVER CALENDARIO
+   ========================================================================== */
+
+body.dark-mode-enabled .day.clickable:hover,
+body.dark-mode-enabled .day.weekend.clickable:hover {
+    background-color: var(--dm-hover) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+
+
+body.dark-mode-enabled .alert.alert-info.alert-block.fade.in.alert-dismissible {
+    background-color: #cce6EA !important;
+}
+
+body.dark-mode-enabled .alert.alert-info.alert-block.fade.in.alert-dismissible span {
+    color: #000000 !important;
 }
