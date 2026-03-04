@@ -923,9 +923,17 @@ body.dark-mode-enabled .popover-region-header-container {
     border-bottom: 1px solid var(--dm-border) !important;
 }
 
+body.dark-mode-enabled .content-item-container.notification:hover {
+    background-color: var(--dm-bg-tertiary) !important;
+}
+
 body.dark-mode-enabled .content-item-container.notification.unread {
     background-color: var(--dm-bg-tertiary) !important;
     border-bottom: 2px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .content-item-container.notification {
+    border-bottom-color: var(--dm-border) !important;
 }
 
 
