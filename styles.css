@@ -74,6 +74,7 @@ body.dark-mode-enabled .userinitials {
     background-image: none !important;
     border: none !important;
     box-shadow: none !important;
+    color-scheme: dark !important;
 }
 
 /* ==========================================================================
@@ -340,6 +341,20 @@ body.dark-mode-enabled .table.discussion-list.generaltable {
 body.dark-mode-enabled .flexible.table.table-striped.table-hover.boxaligncenter.generaltable {
     border: 1px solid var(--dm-border) !important;
     border-radius: 8px !important;
+}
+
+body.dark-mode-enabled .alert.alert-warning.alert-dismissible.fade.show {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .alert.alert-warning.alert-dismissible.fade.show button.close {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
+    color: var(--dm-text-primary) !important;
 }
 
 /* ==========================================================================
@@ -648,6 +663,15 @@ body.dark-mode-enabled .activity-information[id^="yui_3_18"] span:not(.badge) {
     color: var(--dm-text-primary) !important;
 }
 
+body.dark-mode-enabled moodle-dialogue-hd,
+body.dark-mode-enabled moodle-dialogue-bd,
+body.dark-mode-enabled moodle-dialogue-ft {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+
 /* ==========================================================================
    SECTION 15: QUIZ INFO BLOCKS
    ========================================================================== */
@@ -664,7 +688,6 @@ html body.dark-mode-enabled div.info[id*="yui"] {
     display: block !important;
 }
 
-/* Internal text protection */
 html body.dark-mode-enabled .que .info .no,
 html body.dark-mode-enabled .que .info .state,
 html body.dark-mode-enabled .que .info .qno {
@@ -677,11 +700,35 @@ html body.dark-mode-enabled .que .info .qno {
     font-weight: bold !important;
 }
 
-/* Force YUI children to be transparent */
+
 html body.dark-mode-enabled .info div[id*="yui"] {
     background-color: transparent !important;
     border: none !important;
 }
+
+body.dark-mode-enabled .qnbutton.answersaved.free.btn .trafficlight {
+    background-color: #9c990a !important;
+    border: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .qnbutton.answersaved.free.btn .thispageholder {
+    border: 2px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .qnbutton.notyetanswered.free.btn .trafficlight {
+    background-color: var(--dm-bg-tertiary) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .qnbutton.notyetanswered.free.btn .thispageholder {
+    border: 2px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .qnbutton.notyetanswered.free.btn.thispage .thispageholder {
+    border-color: var(--dm-info) !important;
+}
+
+
 
 /* ==========================================================================
    SECTION 16: LOGO
@@ -949,7 +996,7 @@ body.dark-mode-enabled .earlysubmission.cell.c1.lastcol {
 
 
 /* ==========================================================================
-   SECTION 23: HOVER CALENDARIO
+   SECTION 24: HOVER CALENDARIO
    ========================================================================== */
 
 body.dark-mode-enabled .day.clickable:hover,
@@ -966,4 +1013,158 @@ body.dark-mode-enabled .alert.alert-info.alert-block.fade.in.alert-dismissible {
 
 body.dark-mode-enabled .alert.alert-info.alert-block.fade.in.alert-dismissible span {
     color: #000000 !important;
+}
+
+/* ==========================================================================
+   SECTION 25: SUBIR ARCHIVOS
+   ========================================================================== */
+
+body.dark-mode-enabled .fp-filename.text-truncate {
+    background-color: transparent !important;
+}
+
+
+body.dark-mode-enabled .d-block.aabtn a {
+    border: transparent !important;
+}
+
+body.dark-mode-enabled .fp-thumbnail {
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
+}
+
+body.dark-mode-enabled .fp-thumbnail img {
+    border: transparent !important;
+    filter: invert(1) !important;
+}
+
+/* ==========================================================================
+   SECTION 26: MENSAJES MOODLE
+   ========================================================================== */
+
+body.dark-mode-enabled .moodle-dialogue-wrap,
+body.dark-mode-enabled .moodle-dialogue-wrap .moodle-dialogue-bd,
+body.dark-mode-enabled .moodle-dialogue-wrap .moodle-dialogue-hd {
+    background-color: var(--dm-bg-secondary) !important;
+    color: var(--dm-text-primary) !important;
+    border-color: var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue-wrap {
+    border: 1px solid var(--dm-border) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue-hd {
+    border-bottom: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue {
+    width: auto !important;
+    min-width: 480px !important;
+    max-width: 95vw !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue-hd h3 {
+    color: var(--dm-text-primary) !important;
+    word-break: break-all !important;
+    white-space: normal !important;
+    padding-right: 30px !important;
+    /* Espacio para el botón de cerrar */
+    margin-right: 10px !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue .yui3-button.closebutton {
+    filter: invert(1) brightness(2) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue .form-control {
+    background-color: var(--dm-bg-primary) !important;
+    border: 1px solid var(--dm-border) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue label,
+body.dark-mode-enabled .moodle-dialogue .form-control-label {
+    color: var(--dm-text-secondary) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue hr {
+    border-color: var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .fp-info.clearfix p {
+    background-color: transparent !important;
+}
+
+body.dark-mode-enabled .fp-icon {
+    filter: invert(1) !important;
+}
+
+body.dark-mode-enabled .fp-tableview {
+    border: 1px solid var(--dm-border) !important;
+    background-color: var(--dm-bg-secondary) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+/* Estilos para YUI Datatable (Gestor de archivos / tabla crema) */
+body.dark-mode-enabled .yui3-datatable-table,
+body.dark-mode-enabled .yui3-datatable-content,
+body.dark-mode-enabled .yui3-datatable-data tr,
+body.dark-mode-enabled .yui3-datatable-data td,
+body.dark-mode-enabled .yui3-datatable-even .yui3-datatable-cell,
+body.dark-mode-enabled .yui3-datatable-odd .yui3-datatable-cell {
+    background-color: var(--dm-bg-primary) !important;
+    color: var(--dm-text-primary) !important;
+    border-color: var(--dm-border) !important;
+    background-image: none !important;
+}
+
+body.dark-mode-enabled .yui3-datatable-header,
+body.dark-mode-enabled .yui3-datatable-header .yui3-datatable-sort-liner {
+    background-color: var(--dm-bg-secondary) !important;
+    color: var(--dm-text-primary) !important;
+    border-color: var(--dm-border) !important;
+    text-shadow: none !important;
+}
+
+body.dark-mode-enabled .yui3-datatable-data tr:hover,
+body.dark-mode-enabled .yui3-datatable-data tr:hover td,
+body.dark-mode-enabled .yui3-datatable-data tr:hover .yui3-datatable-cell {
+    background-color: var(--dm-hover) !important;
+}
+
+body.dark-mode-enabled .yui3-datatable-data a,
+body.dark-mode-enabled .yui3-datatable-data .fp-filename {
+    color: var(--dm-text-primary) !important;
+    text-decoration: none !important;
+}
+
+body.dark-mode-enabled .yui3-datatable-data a:hover,
+body.dark-mode-enabled .yui3-datatable-data a:hover .fp-filename {
+    color: var(--dm-accent) !important;
+}
+
+/* ==========================================================================
+   SECTION 27: CHECKBOXES Y RADIOS
+   ========================================================================== */
+
+body.dark-mode-enabled input[type="checkbox"],
+body.dark-mode-enabled input[type="radio"] {
+    color-scheme: dark !important;
+    accent-color: var(--dm-accent) !important;
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+
+/* ==========================================================================
+   SECTION 28: SCROLLBAR INTERNO (GESTOR ARCHIVOS)
+   ========================================================================== */
+
+body.dark-mode-enabled .fm-content-wrapper,
+body.dark-mode-enabled .yui3-datatable-content,
+body.dark-mode-enabled .fp-content,
+body.dark-mode-enabled .fp-tableview,
+body.dark-mode-enabled .moodle-dialogue-bd {
+    scrollbar-color: var(--dm-border) var(--dm-bg-primary) !important;
 }
