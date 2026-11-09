@@ -186,6 +186,7 @@ body.dark-mode-enabled .fa {
 body.dark-mode-enabled h1,
 body.dark-mode-enabled h2,
 body.dark-mode-enabled h5,
+body.dark-mode-enabled h6,
 body.dark-mode-enabled .logininfo,
 body.dark-mode-enabled label,
 body.dark-mode-enabled legend,
@@ -195,6 +196,12 @@ body.dark-mode-enabled span,
 body.dark-mode-enabled time,
 body.dark-mode-enabled .mb-1.line-height-3.text-truncate {
     color: var(--dm-text-primary) !important;
+}
+
+/* Code elements and inner spans */
+body.dark-mode-enabled code span,
+body.dark-mode-enabled pre span {
+    color: var(--dm-accent) !important;
 }
 
 /* Secondary text color */
@@ -343,18 +350,46 @@ body.dark-mode-enabled .flexible.table.table-striped.table-hover.boxaligncenter.
     border-radius: 8px !important;
 }
 
-body.dark-mode-enabled .alert.alert-warning.alert-dismissible.fade.show {
+body.dark-mode-enabled .alert-warning,
+body.dark-mode-enabled .alert.alert-warning,
+body.dark-mode-enabled .filemanager .alert,
+body.dark-mode-enabled .filemanager .alert-warning,
+body.dark-mode-enabled div.alert-warning {
     background-color: var(--dm-bg-secondary) !important;
     border: 1px solid var(--dm-border) !important;
+    border-left: 4px solid var(--dm-warning) !important;
     border-radius: 8px !important;
     color: var(--dm-text-primary) !important;
 }
 
-body.dark-mode-enabled .alert.alert-warning.alert-dismissible.fade.show button.close {
-    background-color: var(--dm-bg-secondary) !important;
-    border: 1px solid transparent !important;
-    border-radius: 8px !important;
+body.dark-mode-enabled .alert-warning b,
+body.dark-mode-enabled .alert-warning strong,
+body.dark-mode-enabled .filemanager .alert b,
+body.dark-mode-enabled .filemanager .alert strong {
+    color: var(--dm-warning) !important;
+}
+
+body.dark-mode-enabled .alert-warning a,
+body.dark-mode-enabled .filemanager .alert a {
+    color: var(--dm-accent) !important;
+    text-decoration: underline !important;
+}
+
+body.dark-mode-enabled .alert-warning button.close,
+body.dark-mode-enabled .alert-warning .close,
+body.dark-mode-enabled .filemanager .alert button.close {
+    background-color: transparent !important;
+    border: none !important;
     color: var(--dm-text-primary) !important;
+    text-shadow: none !important;
+    opacity: 0.8 !important;
+}
+
+body.dark-mode-enabled .alert-warning button.close:hover,
+body.dark-mode-enabled .alert-warning .close:hover,
+body.dark-mode-enabled .filemanager .alert button.close:hover {
+    color: var(--dm-accent) !important;
+    opacity: 1 !important;
 }
 
 /* ==========================================================================
@@ -468,10 +503,66 @@ body.dark-mode-enabled .backwhite.flexwrap,
 body.dark-mode-enabled fieldset,
 body.dark-mode-enabled [data-filterregion="filter"],
 body.dark-mode-enabled thead th.header,
-body.dark-mode-enabled .formulation.clearfix {
+body.dark-mode-enabled .formulation.clearfix,
+body.dark-mode-enabled code,
+body.dark-mode-enabled pre,
+body.dark-mode-enabled code *,
+body.dark-mode-enabled pre *,
+body.dark-mode-enabled span:has(> code),
+body.dark-mode-enabled span:has(code),
+body.dark-mode-enabled h6:has(code),
+body.dark-mode-enabled .no-overflow h6,
+body.dark-mode-enabled .no-overflow h5,
+body.dark-mode-enabled .no-overflow h4,
+body.dark-mode-enabled .no-overflow h3,
+body.dark-mode-enabled .no-overflow h2,
+body.dark-mode-enabled .no-overflow h1 {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
+}
+
+/* Neutralizar fondos claros/blancos inline generados al copiar y pegar en Atenea */
+body.dark-mode-enabled [style*="background-color: #ffffff" i],
+body.dark-mode-enabled [style*="background-color:#ffffff" i],
+body.dark-mode-enabled [style*="background-color: #fff" i],
+body.dark-mode-enabled [style*="background-color:#fff" i],
+body.dark-mode-enabled [style*="background-color: white" i],
+body.dark-mode-enabled [style*="background-color:white" i],
+body.dark-mode-enabled [style*="background-color: rgb(255, 255, 255)" i],
+body.dark-mode-enabled [style*="background-color: rgb(255,255,255)" i],
+body.dark-mode-enabled [style*="background-color:rgb(255, 255, 255)" i],
+body.dark-mode-enabled [style*="background-color:rgb(255,255,255)" i],
+body.dark-mode-enabled [style*="background: #ffffff" i],
+body.dark-mode-enabled [style*="background:#ffffff" i],
+body.dark-mode-enabled [style*="background: #fff" i],
+body.dark-mode-enabled [style*="background:#fff" i],
+body.dark-mode-enabled [style*="background: white" i],
+body.dark-mode-enabled [style*="background:white" i],
+body.dark-mode-enabled [style*="background: rgb(255, 255, 255)" i],
+body.dark-mode-enabled [style*="background: rgb(255,255,255)" i],
+body.dark-mode-enabled [style*="background:rgb(255, 255, 255)" i],
+body.dark-mode-enabled [style*="background:rgb(255,255,255)" i] {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Neutralizar colores de texto oscuros inline pegados desde editores externos */
+body.dark-mode-enabled code [style*="color: #333333" i],
+body.dark-mode-enabled code [style*="color:#333333" i],
+body.dark-mode-enabled code [style*="color: #333" i],
+body.dark-mode-enabled code [style*="color:#333" i],
+body.dark-mode-enabled code [style*="color: #000000" i],
+body.dark-mode-enabled code [style*="color:#000000" i],
+body.dark-mode-enabled code [style*="color: #000" i],
+body.dark-mode-enabled code [style*="color:#000" i],
+body.dark-mode-enabled code [style*="color: black" i],
+body.dark-mode-enabled code [style*="color:black" i],
+body.dark-mode-enabled code [style*="color: rgb(51, 51, 51)" i],
+body.dark-mode-enabled code [style*="color: rgb(51,51,51)" i],
+body.dark-mode-enabled code [style*="color:rgb(51, 51, 51)" i],
+body.dark-mode-enabled code [style*="color:rgb(51,51,51)" i] {
+    color: var(--dm-accent) !important;
 }
 
 /* ==========================================================================
@@ -663,9 +754,9 @@ body.dark-mode-enabled .activity-information[id^="yui_3_18"] span:not(.badge) {
     color: var(--dm-text-primary) !important;
 }
 
-body.dark-mode-enabled moodle-dialogue-hd,
-body.dark-mode-enabled moodle-dialogue-bd,
-body.dark-mode-enabled moodle-dialogue-ft {
+body.dark-mode-enabled .moodle-dialogue-hd,
+body.dark-mode-enabled .moodle-dialogue-bd,
+body.dark-mode-enabled .moodle-dialogue-ft {
     background-color: var(--dm-bg-secondary) !important;
     border: 1px solid var(--dm-border) !important;
     color: var(--dm-text-primary) !important;
@@ -1016,47 +1107,209 @@ body.dark-mode-enabled .alert.alert-info.alert-block.fade.in.alert-dismissible s
 }
 
 /* ==========================================================================
-   SECTION 25: SUBIR ARCHIVOS
+   SECTION 25: SUBIR ARCHIVOS (GESTOR DE ARCHIVOS / FILEMANAGER)
    ========================================================================== */
 
-body.dark-mode-enabled .fp-filename.text-truncate {
+/* Contenedor principal y barra superior */
+body.dark-mode-enabled .filemanager,
+body.dark-mode-enabled .filemanager-container,
+body.dark-mode-enabled .filemanager-container.card {
+    background-color: var(--dm-bg-primary) !important;
+    border-color: var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .fp-navbar,
+body.dark-mode-enabled .fp-navbar.card,
+body.dark-mode-enabled .fp-navbar.bg-faded {
+    background-color: var(--dm-bg-secondary) !important;
+    border-color: var(--dm-border) !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+/* Restricciones y mensajes drag & drop */
+body.dark-mode-enabled .fp-restrictions,
+body.dark-mode-enabled .fp-restrictions span,
+body.dark-mode-enabled .dnduploadnotsupported-message,
+body.dark-mode-enabled .fm-empty-container,
+body.dark-mode-enabled .dndupload-message,
+body.dark-mode-enabled .dndupload-target {
+    color: var(--dm-text-secondary) !important;
+    border-color: var(--dm-border) !important;
+}
+
+body.dark-mode-enabled .dndupload-arrow i {
+    color: var(--dm-text-secondary) !important;
+}
+
+/* Pathbar (ruta de carpetas) */
+body.dark-mode-enabled .fp-pathbar,
+body.dark-mode-enabled .fp-path-folder {
+    color: var(--dm-text-secondary) !important;
+}
+
+body.dark-mode-enabled .fp-pathbar a,
+body.dark-mode-enabled .fp-path-folder-name,
+body.dark-mode-enabled .fp-path-folder-name.aalink {
+    color: var(--dm-accent) !important;
+}
+
+/* Botones de la barra de herramientas del gestor */
+body.dark-mode-enabled .fp-toolbar .btn,
+body.dark-mode-enabled .fp-viewbar .btn,
+body.dark-mode-enabled .filemanager-toolbar .btn {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .fp-toolbar .btn:hover,
+body.dark-mode-enabled .fp-viewbar .btn:hover,
+body.dark-mode-enabled .filemanager-toolbar .btn:hover {
+    background-color: var(--dm-hover) !important;
+    border-color: var(--dm-accent) !important;
+    color: var(--dm-accent) !important;
+}
+
+body.dark-mode-enabled .fp-viewbar .btn.checked,
+body.dark-mode-enabled .fp-viewbar .btn.active {
+    background-color: var(--dm-bg-tertiary) !important;
+    border-color: var(--dm-accent) !important;
+    color: var(--dm-accent) !important;
+}
+
+/* Archivos en vista de iconos (cuadrícula) */
+body.dark-mode-enabled .fp-iconview .fp-file,
+body.dark-mode-enabled .filemanager .fp-file {
     background-color: transparent !important;
 }
 
-
+body.dark-mode-enabled .d-block.aabtn,
 body.dark-mode-enabled .d-block.aabtn a {
     border: transparent !important;
+    text-decoration: none !important;
 }
 
-body.dark-mode-enabled .fp-thumbnail {
+body.dark-mode-enabled .fp-thumbnail,
+body.dark-mode-enabled .filemanager .fp-thumbnail {
+    background-color: var(--dm-bg-secondary) !important;
     border: 1px solid var(--dm-border) !important;
     border-radius: 8px !important;
+    transition: border-color 0.2s ease !important;
+}
+
+body.dark-mode-enabled .fp-file:hover .fp-thumbnail,
+body.dark-mode-enabled .fp-file.fp-hascontextmenu:hover .fp-thumbnail {
+    border-color: var(--dm-accent) !important;
 }
 
 body.dark-mode-enabled .fp-thumbnail img {
     border: transparent !important;
-    filter: invert(1) !important;
+    filter: invert(1) brightness(1.2) !important;
+}
+
+/* Caja de texto del nombre del archivo */
+body.dark-mode-enabled .filemanager .fp-filename-field,
+body.dark-mode-enabled .fp-filename-field,
+body.dark-mode-enabled .fp-file .fp-filename-field {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 6px !important;
+    padding: 2px 4px !important;
+}
+
+body.dark-mode-enabled .filemanager .fp-filename,
+body.dark-mode-enabled .fp-filename,
+body.dark-mode-enabled .fp-filename.text-truncate {
+    background-color: transparent !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .fp-file:hover .fp-filename-field {
+    border-color: var(--dm-accent) !important;
+}
+
+body.dark-mode-enabled .fp-file:hover .fp-filename,
+body.dark-mode-enabled .fp-file a:hover .fp-filename {
+    color: var(--dm-accent) !important;
+}
+
+/* Menú contextual de 3 puntos en archivo */
+body.dark-mode-enabled .fp-contextmenu,
+body.dark-mode-enabled .fp-contextmenu.btn-light,
+body.dark-mode-enabled a.fp-contextmenu {
+    background-color: var(--dm-bg-secondary) !important;
+    border: 1px solid var(--dm-border) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .fp-contextmenu:hover,
+body.dark-mode-enabled a.fp-contextmenu:hover {
+    background-color: var(--dm-hover) !important;
+    border-color: var(--dm-accent) !important;
+}
+
+body.dark-mode-enabled .fp-contextmenu i {
+    color: var(--dm-text-secondary) !important;
+}
+
+body.dark-mode-enabled .fp-contextmenu:hover i {
+    color: var(--dm-accent) !important;
 }
 
 /* ==========================================================================
-   SECTION 26: MENSAJES MOODLE
+   SECTION 26: MENSAJES Y DIÁLOGOS MOODLE (MODALES YUI / FILEMANAGER SELECT)
    ========================================================================== */
 
+/* Fondo oscuro y bordes para todas las capas del diálogo */
+body.dark-mode-enabled .moodle-dialogue-base,
+body.dark-mode-enabled .moodle-dialogue-base .moodle-dialogue,
+body.dark-mode-enabled .moodle-dialogue,
 body.dark-mode-enabled .moodle-dialogue-wrap,
-body.dark-mode-enabled .moodle-dialogue-wrap .moodle-dialogue-bd,
-body.dark-mode-enabled .moodle-dialogue-wrap .moodle-dialogue-hd {
+body.dark-mode-enabled .moodle-dialogue-content,
+body.dark-mode-enabled .yui3-panel,
+body.dark-mode-enabled .yui3-panel-content,
+body.dark-mode-enabled .yui3-widget-stdmod,
+body.dark-mode-enabled .moodle-dialogue-hd,
+body.dark-mode-enabled .yui3-widget-hd,
+body.dark-mode-enabled .moodle-dialogue-bd,
+body.dark-mode-enabled .yui3-widget-bd,
+body.dark-mode-enabled .moodle-dialogue-ft,
+body.dark-mode-enabled .yui3-widget-ft,
+body.dark-mode-enabled .filemanager.fp-select,
+body.dark-mode-enabled .fp-select,
+body.dark-mode-enabled .fp-select form.mform,
+body.dark-mode-enabled .fp-info,
+body.dark-mode-enabled .file-picker,
+body.dark-mode-enabled .fp-repo-area,
+body.dark-mode-enabled .fp-content-area {
     background-color: var(--dm-bg-secondary) !important;
     color: var(--dm-text-primary) !important;
     border-color: var(--dm-border) !important;
 }
 
-body.dark-mode-enabled .moodle-dialogue-wrap {
-    border: 1px solid var(--dm-border) !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+/* Selector de repositorios (cuando se hace clic en 'Afegeix...') */
+body.dark-mode-enabled .fp-repo-area {
+    border-right: 1px solid var(--dm-border) !important;
+    background-color: var(--dm-bg-primary) !important;
 }
 
-body.dark-mode-enabled .moodle-dialogue-hd {
-    border-bottom: 1px solid var(--dm-border) !important;
+body.dark-mode-enabled .fp-repo-area .fp-repo {
+    color: var(--dm-text-secondary) !important;
+}
+
+body.dark-mode-enabled .fp-repo-area .fp-repo.active,
+body.dark-mode-enabled .fp-repo-area .fp-repo:hover {
+    background-color: var(--dm-hover) !important;
+    color: var(--dm-accent) !important;
+}
+
+/* Borde y sombra general del contenedor modal */
+body.dark-mode-enabled .moodle-dialogue-wrap,
+body.dark-mode-enabled .yui3-panel-content {
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+    overflow: hidden !important;
 }
 
 body.dark-mode-enabled .moodle-dialogue {
@@ -1065,36 +1318,154 @@ body.dark-mode-enabled .moodle-dialogue {
     max-width: 95vw !important;
 }
 
+/* Cabecera del diálogo */
+body.dark-mode-enabled .moodle-dialogue-hd,
+body.dark-mode-enabled .yui3-widget-hd {
+    border-bottom: 1px solid var(--dm-border) !important;
+    padding: 12px 16px !important;
+}
+
 body.dark-mode-enabled .moodle-dialogue-hd h3 {
-    color: var(--dm-text-primary) !important;
+    color: var(--dm-accent) !important;
     word-break: break-all !important;
     white-space: normal !important;
     padding-right: 30px !important;
-    /* Espacio para el botón de cerrar */
-    margin-right: 10px !important;
+    margin: 0 !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
 }
 
-body.dark-mode-enabled .moodle-dialogue .yui3-button.closebutton {
-    filter: invert(1) brightness(2) !important;
+/* Botón cerrar modal */
+body.dark-mode-enabled .moodle-dialogue .yui3-button.closebutton,
+body.dark-mode-enabled .moodle-dialogue-hd .closebutton {
+    background-color: transparent !important;
+    border: none !important;
+    filter: invert(1) brightness(1.5) !important;
+    opacity: 0.75 !important;
+    transition: opacity 0.2s ease !important;
 }
 
-body.dark-mode-enabled .moodle-dialogue .form-control {
+body.dark-mode-enabled .moodle-dialogue .yui3-button.closebutton:hover,
+body.dark-mode-enabled .moodle-dialogue-hd .closebutton:hover {
+    opacity: 1 !important;
+}
+
+/* Controles de formulario dentro del modal */
+body.dark-mode-enabled .moodle-dialogue .form-control,
+body.dark-mode-enabled .moodle-dialogue select,
+body.dark-mode-enabled .fp-select .form-control,
+body.dark-mode-enabled .fp-select select {
     background-color: var(--dm-bg-primary) !important;
     border: 1px solid var(--dm-border) !important;
     color: var(--dm-text-primary) !important;
+    border-radius: 6px !important;
 }
 
+body.dark-mode-enabled .moodle-dialogue select option,
+body.dark-mode-enabled .fp-select select option {
+    background-color: var(--dm-bg-primary) !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .moodle-dialogue .form-control:focus,
+body.dark-mode-enabled .fp-select .form-control:focus {
+    border-color: var(--dm-accent) !important;
+    box-shadow: 0 0 0 2px rgba(128, 216, 255, 0.25) !important;
+}
+
+/* Etiquetas del diálogo */
 body.dark-mode-enabled .moodle-dialogue label,
-body.dark-mode-enabled .moodle-dialogue .form-control-label {
+body.dark-mode-enabled .moodle-dialogue .form-control-label,
+body.dark-mode-enabled .fp-select label,
+body.dark-mode-enabled .fp-select .form-control-label {
     color: var(--dm-text-secondary) !important;
 }
 
-body.dark-mode-enabled .moodle-dialogue hr {
+/* Botones secundarios dentro del diálogo (Baixa, Suprimeix, Zip, Unzip, etc.) */
+body.dark-mode-enabled .fp-select .btn-secondary,
+body.dark-mode-enabled .fp-select button.btn-secondary,
+body.dark-mode-enabled .fp-select-buttons .btn-secondary {
+    background-color: var(--dm-bg-primary) !important;
+    border: 1px solid var(--dm-border) !important;
+    color: var(--dm-text-primary) !important;
+    border-radius: 6px !important;
+}
+
+body.dark-mode-enabled .fp-select .btn-secondary:hover,
+body.dark-mode-enabled .fp-select button.btn-secondary:hover,
+body.dark-mode-enabled .fp-select-buttons .btn-secondary:hover {
+    background-color: var(--dm-hover) !important;
+    border-color: var(--dm-accent) !important;
+    color: var(--dm-accent) !important;
+}
+
+/* Botón primario (Actualitza) */
+body.dark-mode-enabled .fp-select-buttons .fp-file-update,
+body.dark-mode-enabled .fp-select-buttons .btn-primary {
+    background-color: var(--dm-bg-tertiary) !important;
+    border: 1px solid var(--dm-accent) !important;
+    color: var(--dm-text-primary) !important;
+    border-radius: 6px !important;
+}
+
+body.dark-mode-enabled .fp-select-buttons .fp-file-update:hover,
+body.dark-mode-enabled .fp-select-buttons .btn-primary:hover {
+    background-color: var(--dm-accent) !important;
+    color: var(--dm-bg-primary) !important;
+}
+
+/* Separadores y preview en el diálogo */
+body.dark-mode-enabled .moodle-dialogue hr,
+body.dark-mode-enabled .fp-select hr {
     border-color: var(--dm-border) !important;
 }
 
+body.dark-mode-enabled .fp-info.clearfix,
 body.dark-mode-enabled .fp-info.clearfix p {
     background-color: transparent !important;
+    color: var(--dm-text-primary) !important;
+}
+
+body.dark-mode-enabled .fp-info .fp-thumbnail,
+body.dark-mode-enabled p.fp-thumbnail {
+    background-color: var(--dm-bg-primary) !important;
+    border: 1px solid var(--dm-border) !important;
+    border-radius: 8px !important;
+    padding: 6px !important;
+    display: inline-block !important;
+}
+
+body.dark-mode-enabled .fp-info .fp-thumbnail img,
+body.dark-mode-enabled p.fp-thumbnail img {
+    border: transparent !important;
+    filter: invert(1) brightness(1.2) !important;
+}
+
+/* Metadatos del archivo (Darrera modificació, Mida, etc.) */
+body.dark-mode-enabled .fp-fileinfo,
+body.dark-mode-enabled .fp-fileinfo div {
+    color: var(--dm-text-secondary) !important;
+}
+
+body.dark-mode-enabled .fp-fileinfo .fp-value {
+    color: var(--dm-text-primary) !important;
+}
+
+/* Iconos de ayuda y enlaces */
+body.dark-mode-enabled .fp-file-setmain-help a,
+body.dark-mode-enabled .fp-license a {
+    color: var(--dm-accent) !important;
+}
+
+body.dark-mode-enabled .fp-select .text-info {
+    color: var(--dm-accent) !important;
+}
+
+/* Máscara de fondo modal YUI */
+body.dark-mode-enabled .yui3-widget-mask,
+body.dark-mode-enabled .moodle-dialogue-base .yui3-widget-mask {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.7 !important;
 }
 
 body.dark-mode-enabled .fp-icon {
